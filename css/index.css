@@ -1,0 +1,172 @@
+@import url('https://fonts.googleeapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+.card {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    transform-style: preserve-3d;
+}
+
+.card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: 1.5s ease-in-out;
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.card .face.front {
+    background-color: #ff0;
+}
+
+.card:hover .face.front {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card .face.back {
+    background-color: #3bc2ff;
+    color: #fff;
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .face.back {
+    transform: perspective(500px) rotateY(360deg);
+}
+
+.card .face h2 {
+    font-size: 4em;
+    text-transform: uppercase;
+    transform: perspective(500px) translateZ(50px);
+}
+
+/*  */
+
+.card .face img {
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    text-transform: uppercase;
+    transform: perspective(500px) translateZ(50px);
+}
+
+.header {
+    position: absolute;
+    font-size: 4em;
+    top: 20px;
+    left: 40px;
+}
+
+.header .myCV h1 {
+    color: aliceblue;
+}
+
+.mouse {
+    position: absolute;
+    font-size: 1em;
+    bottom: 10px;
+    right: 20px;
+}
+
+.mouse h3 {
+    color: #fff;
+}
+
+.mouse a {
+    color: #fff;
+}
+
+.card .face.front h2 {
+    position: absolute;
+    /* text-align: center; */
+    top: 30px;
+    left: 150px;
+}
+
+.card .face.front .myExperience {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    /* font-size: 1.25em; */
+    text-transform: uppercase;
+    transform: perspective(6000px) translateZ(50px);
+}
+
+.card .face.front .myExperience h3 {
+    font-size: 1.5em;
+    text-decoration:underline;
+}
+
+.myInformation {
+    font-size: 1.5em;
+}
+
+.card .face.back h2 {
+    position: absolute;
+    text-align: center;
+    top: 20px;
+}
+
+.card .face.back .myProgram {
+    border-style:ridge;
+    border-radius: 30px;
+    width: 20%;
+    height: 60%;
+    position: absolute;
+    left: 50px;
+    /* height: 50px; */
+}
+
+.card .face.back .myProgram .programList{
+    margin: 10px;
+    /* text-align: center; */
+}
+
+.card .face.back .myDB {
+    border-style:ridge;
+    /* 變形 */
+    border-radius: 30px;
+    width: 20%;
+    height: 60%;
+    position: absolute;
+}
+
+.card .face.back .myDB .dbList {
+    margin: 10px;
+}
+
+.card .face.back .myTool {
+    border-style:ridge;
+    /* 變形 */
+    border-radius: 30px;
+    width: 20%;
+    height: 60%;
+    position: absolute;
+    right: 10%;
+}
+
+.card .face.back .myTool .toolList {
+    margin: 10px;
+}
